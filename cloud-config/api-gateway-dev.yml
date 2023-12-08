@@ -6,6 +6,6 @@ spring:
     gateway:
       routes:
         - id: productApiRoute
-          uri: localhost:8082
+          uri: lb://product-api
           predicates:
             - Path=/api/items/**
