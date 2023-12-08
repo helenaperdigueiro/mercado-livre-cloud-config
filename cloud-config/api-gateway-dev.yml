@@ -6,6 +6,6 @@ spring:
     gateway:
       routes:
         - id: productApiRoute
-          uri: lb://PRODUCTAPI
+          uri: lb://product-api
           predicates:
             - Path=/api/items/**
