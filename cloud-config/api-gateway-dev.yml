@@ -1,2 +1,11 @@
 server:
   port: 8081
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: productApiRoute
+          uri: lb://PRODUCTAPI
+          predicates:
+            - Path=/api/items/**
